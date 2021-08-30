@@ -34,6 +34,17 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ],
+    "builds": [
+      {
+        "src": "package.json",
+        "use": "@now/static-build",
+        "config": { "distDir": "build" }
+      },
+      {
+        "src": "build/**.*.js",
+        "use": "@now/node"
+      }
     ]
   }
 }
